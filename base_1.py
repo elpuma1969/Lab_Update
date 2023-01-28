@@ -55,7 +55,7 @@ def backup_2_file():
         month = now.month
         day = now.day
 
-        filename = f'{hostname}_{year}-{month}-{day}_com_test.txt'
+        filename = '/home/puma/Desktop/pthon_gig/BACKUPS/' + f'{hostname}_{year}-{month}-{day}_com_test.txt'
 
         with open(filename, 'w') as final:
             final.write(output)
