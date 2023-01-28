@@ -44,7 +44,8 @@ def backup_2_file():
         print('Entering the enable mode...')
         connection.enable()
 
-        output = connection.send_config_from_file("comm1.txt")
+        output = connection.send_config_from_file(""/home/puma/Desktop/pthon_gig/configs_switches/"
+                                                  "description_commands.txt"")
         print(output)
 
         prompt = connection.find_prompt()
@@ -106,7 +107,7 @@ def save_commands():
         month = now.month
         day = now.day
 
-        filename = f'{hostname}_{year}-{month}-{day}_after_config.txt'
+        filename = '/home/puma/Desktop/pthon_gig/BACKUPS/' + f'{hostname}_{year}-{month}-{day}_after_config.txt'
 
         with open(filename, 'w') as final:
             final.write(output)
